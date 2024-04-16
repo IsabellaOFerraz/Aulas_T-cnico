@@ -1,0 +1,58 @@
+CREATE TABLE FUNCIONARIO(
+    idfunc NUMBER(3)PRIMARY KEY,
+    nomefunc VARCHAR(30)NOT NULL,
+    nomedept VARCHAR(20)NOT NULL,
+    cargo VARCHAR(20)NOT NULL,
+    dataadm DATE NOT NULL,
+    salario NUMBER(7,2)NOT NULL,
+    comissao NUMBER(7,2)
+);
+
+DESC FUNCIONARIO;
+
+insert into Funcionario values (1,'Antonio','Financeiro','Gerente',TO_DATE('10-10-2012','DD-MM-YYYY'),3400,600);
+insert into Funcionario values(2,'Vilmar','Vendas','Analista',TO_DATE('01-01-2003','DD-MM-YYYY'),4300,2000);
+insert into Funcionario values(3,'Mauro','Informática','Gerente',TO_DATE('10-04-2000','DD-MM-YYYY'),4500,500);
+insert into Funcionario values(4,'Paulo','Informática','Assistente',TO_DATE('09-02-2003','DD-MM-YYYY'),1200,640);
+insert into Funcionario values(5,'Rogerio','Projetos','Gerente',TO_DATE('09-06-2000','DD-MM-YYYY'),4400,NULL);
+insert into Funcionario values(6,'Ana','Vendas','Presidente',TO_DATE('09-04-1999','DD-MM-YYYY'),8000,NULL);
+insert into Funcionario values(7,'Mauricio','Materiais','Assistente',TO_DATE('03-02-1998','DD-MM-YYYY'),2500,340);
+insert into Funcionario values(8,'Victor','Materiais','Supervisor',TO_DATE('06-02-1999','DD-MM-YYYY'),3400,440);
+insert into Funcionario values(9,'Jose','Informática','Programador',TO_DATE('08/07/2000','DD-MM-YYYY'),3000,640);
+insert into Funcionario values(10,'Laura','Financeiro','Assistente',TO_DATE('23/04/1999','DD-MM-YYYY'),2100,400);
+
+SELECT * FROM FUNCIONARIO;
+
+
+1-SELECT nomedept, COUNT(nomefunc) FROM FUNCIONARIO GROUP BY nomedept;
+
+2-SELECT nomedept, COUNT(*) FROM FUNCIONARIO WHERE comissao > 0 GROUP BY nomedept ;
+ 
+3-SELECT nomedept, COUNT(nomedept) FROM FUNCIONARIO WHERE extract(YEAR FROM dataadm ) = 2000 GROUP BY nomedept;
+
+4-SELECT cargo, COUNT(*) FROM FUNCIONARIO GROUP BY cargo;
+
+5-SELECT cargo, COUNT(*) as "número_de_funcionarios" FROM FUNCIONARIO GROUP BY cargo HAVING COUNT(*) > 2;
+
+6-SELECT nomedept, COUNT(*) as "número_de_funcionarios" FROM FUNCIONARIO GROUP BY nomedept HAVING COUNT(*) > 1;
+
+7-SELECT cargo, MAX(salario) AS "maior__valor_dos_salários" FROM FUNCIONARIO GROUP BY cargo; ORDER BY salario;
+
+8-SELECT cargo, MIN(salario) AS "menor_valor_dos_salários" FROM FUNCIONARIO GROUP BY cargo; ORDER BY salario;
+
+9-SELECT cargo, floor (AVG(salario)) AS "a_média_dos_salarios_são" FROM FUNCIONARIO GROUP BY cargo; ORDER BY salario;
+
+10-SELECT cargo, AVG(salario) AS "a_media_de_salario" FROM FUNCIONARIO GROUP BY cargo ORDER BY AVG(salario) DESC;
+
+11-SELECT nomedept, AVG(salario) AS "media_de_salarios_dos_departamentos" FROM FUNCIONARIO GROUP BY nomedept ORDER BY AVG(salario);
+
+12-SELECT nomedept, AVG(salario) AS "media_salario_é_de" FROM FUNCIONARIO WHERE salario >3000 GROUP BY nomedept ORDER BY AVG(salario);
+
+13-SELECT nomedept, AVG(salario) AS "media_salario_é" FROM FUNCIONARIO WHERE salario <=3000 GROUP BY nomedept ORDER BY AVG(salario);
+
+14-SELECT nomedept,cargo, COUNT (idfunc) AS "número_de_funcionarios" From FUNCIONARIO GROUP BY nomedept,cargo;
+
+15-SELECT cargo,nomedept, COUNT (idfunc) AS "número_funcionarios" From FUNCIONARIO GROUP BY cargo,nomedept;
+
+16-SELECT cargo, ROUND(AVG(salario * 12), 2) AS "a_media_salarial_anual_é" FROM FUNCIONARIO GROUP BY cargo ORDER BY "media_salarial_anual_é" DESC;
+
