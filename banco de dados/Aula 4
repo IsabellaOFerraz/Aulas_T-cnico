@@ -1,0 +1,55 @@
+CREATE TABLE DEPTO(
+    coddepto NUMBER(2)PRIMARY KEY,
+    nomedepto VARCHAR(20)NOT NULL
+);
+
+DESC DEPTO;
+
+INSERT INTO DEPTO VALUES(1,'Compras');
+INSERT INTO DEPTO VALUES(2,'Financeiro');
+INSERT INTO DEPTO VALUES(3,'Informática');
+INSERT INTO DEPTO VALUES(4,'Produção');
+INSERT INTO DEPTO VALUES(5,'Vendas');
+
+SELECT * FROM DEPTO;
+
+CREATE TABLE FUNCIONARIO(
+    idfunc NUMBER(4)PRIMARY KEY,
+    nomefunc VARCHAR(30)NOT NULL,
+    salario NUMBER(7,2)NOT NULL,
+    comissao NUMBER(7,2),
+    coddepto NUMBER(2)NOT NULL
+);
+
+DESC FUNCIONARIO;
+
+INSERT INTO FUNCIONARIO VALUES (1,'Steve Jobs','3400.00','600.00',3);
+INSERT INTO FUNCIONARIO VALUES (2,'Linus Torvalds','4300.00','2000.00',2);
+INSERT INTO FUNCIONARIO VALUES (3,'Blaise Pascal','4500.00','2500.00',1);
+INSERT INTO FUNCIONARIO VALUES (4,'Ada Augusta','1200.00','640.00',3);
+INSERT INTO FUNCIONARIO VALUES (5,'George Boole','2700.00',NULL,4);
+INSERT INTO FUNCIONARIO VALUES (6,'Bill Gates','8000.00','1250.00',5);
+INSERT INTO FUNCIONARIO VALUES (7,'Margaret Hamilton','4500.00',NULL,2);
+INSERT INTO FUNCIONARIO VALUES (8,'Alan Turing','3400.00','440.00',5);
+INSERT INTO FUNCIONARIO VALUES (9,'Grace Hopper','8200.00','640.00',2);
+
+SELECT * FROM FUNCIONARIO;
+
+1-SELECT COUNT (idfunc) AS QNT_FUNCIONARIO FROM FUNCIONARIO ;
+
+2-SELECT COUNT (*) AS QTD_func_Informática FROM FUNCIONARIO WHERE coddepto = (SELECT  coddepto FROM depto WHERE nomedepto = 'Informática')
+
+3-SELECT COUNT (coddepto) AS QNT_DEPARTAMENTO FROM DEPTO ;
+
+4-SELECT COUNT (comissao) AS comissao_pagas FROM FUNCIONARIO;
+
+5-SELECT MAX(salario) AS maior, MIN(salario) AS menor FROM FUNCIONARIO WHERE salario > 1000 AND salario < 9000;
+
+6-SELECT MAX(salario) AS maior_comissao FROM FUNCIONARIO;
+
+7-SELECT SUM(salario) AS soma_total_dos_salarios FROM FUNCIONARIO;
+
+8-SELECT AVG(salario) AS media_total_dos_salarios FROM FUNCIONARIO;
+
+9-SELECT SUM(salario) + SUM(comissao) AS total_da_soma_dos_salarios_e_das_comissoes FROM FUNCIONARIO WHERE coddepto = (SELECT coddepto FROM depto WHERE nomedepto = 'Vendas');
+
