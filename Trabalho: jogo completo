@@ -1,0 +1,109 @@
+print("Em busca do tesouro\n")#o titulo claro
+
+nome = input("OLÁ PEQUENO AVENTUREIRO(A) DIGITE SEU NOME: ")
+
+print("\nOLÁ AVENTUREIRO(A)",nome,"QUE BOM TE VER POR AQUI SUA MISSAO É ENCONTRAR TESOUROS MISTERIOSOS,E PARA ISSO VOCE TERÁ QUE TOMAR ARRISCADAS DECISSÕES DURANTE O CAMINHO QUE IRÁ PERCORRER QUE PODEM TE LEVAR AO SEU OBJETIVO OU NÃO.\n")
+#texto inicial, introdução do jogo
+
+print("VAMOS LÁ") 
+
+def questao1():
+    print("\nVOCÊ ESTA ANDADO EM UMA FLORESTA DENSA E ESCURA E ENCONTRA O SEU PRIMEIRO DESAFIO,VOCÊ AVISTA UMA AREIA MOVEDIÇA E TERA QUE PASSAR POR ELA,E CADA VEZ QUE VOCE FOR DAR UM PASSO VOCÊ AFUNDA MAIS,ENTAO VOCE TERÁ DUAS OPÇÕES:\n") #questão 1 
+    
+    
+    print ("1- VOCE PODE PASSAR POR CIMA ULTILIZANDO O SIPÓ DA ÁRVORE")
+    print("2- USAR O TRONCO A SUA DIREITA")#opções da 1
+    
+    escolha = input("\nQUAL NÚMERO VOCÊ ESCOLHE 1 OU 2: ")
+    
+    if escolha == "2":
+        print("PARABENS!VOCE PASSOU PARA APROXIMA FASE")
+        questao2()
+        
+    else:
+        print("COMO CONSEQUÊNCIA DA SUA ESCOLHA VOCÊ MORREU,FIM DE JOGO, VAMOS TENTAR NOVAMENTE")#Consequências da 1
+        questao1()
+        
+
+def questao2():
+    print("\nAPÓS PASSAR A PRIMEIRA FASE ESTA A SUA FRENTE O SEGUNDO DESAFIO,QUE É PASSAR PELO PANTANO DOS JACARES VOCE TEM DUAS OPÇÕES:\n")#questão 2
+    
+    print("1-VOCE PODE IR PELA ESQUERDA ONDE TEM UMA PONTE DE MADEIRA QUE ESTA ACIMA DOS JACARÉS") 
+    print("2-VOCE PODE IR PELA DIREITA E ANDAR CALMAMENTE ENTRE OS JACARES\n")#opções da 2
+    
+    
+    escolha2 = input("QUAL NÚMERO VOCÊ ESCOLHE 1 OU 2: ")
+    
+    if escolha2 == "2":
+        print("PARABENS!VOCE PASSOU PARA PROXIMA FASE")
+        questao3()
+   
+    else:
+        print("FIM JOGO A PONTE QUEBROU E VOCE FOI DEVORADO PELOS JACARÉS,TENTE NOVAMENTE\n")#Consequências da 2
+        questao2()
+
+def questao3():
+    print("\nPARABENS VOCE CHEGOU NA ULTIMA FASE QUE SERA PASSAR PELAS ARMADILHAS MAIS PERIGOSAS QUE CAÇADORES ESPALHARAM PELA FLORESTA PARA ANIMAIS SELVAGENS VOCE TEM DUAS OPÇÕES:\n")#questão 3
+    
+    
+    print("1-VOCE PODE ULTILIZAR PEDRAS PARA ATIVAR TODAS AS ARMADILHAS PARA PODER PASSAR")
+    print("2-DESVIAR DAS ARMILHAS SEM ULTILIZAR NADA\n")#opções da 3
+    
+    escolha3 = input("QUAL NÚMERO VOCÊ ESCOLHE 1 OU 2: ")
+    
+    if escolha3 == "1":
+        print("PARABENS!VOCE CONCLUIU OS DESAFIOS E CHEGOU NA BARCO QUE IRA TE LEVAR AO TESOURO")
+        partefinal()
+    else:
+        print("FIM DE JOGO VOCE CAIU E FOI PEGO POR TODAS AS ARMADILHAS, ULTIMA TENTATIVA")#consequências da 3
+        questao3()
+
+def partefinal():
+    print("\nQUANDO VOCÊ ESTA CHEGANDO NA ILHA , VOCÊ AVISTA UM PORTÃO ENORME E TEM QUE RESPONDER CHARADAS PARA ENTRAR NA ILHA E CONSEGUIR O TESOURO OU NÃO\n")#essa sera a ultima coisa que você tera que fazer
+    
+    p1 = input("1- O QUE É O QUE É CAI EM PÉ E CORRE DEITADO ?: \n")
+    
+    if p1 == "a chuva" or p1 == "chuva":
+        print("VOCÊ  ACERTOU E GANHOU UM COLAR DE DIAMANTES, VAMOS PARA A PROXIMA PERGUNTA")
+        charada()
+    else:
+        print("VOCê ERROU VAMOS PARA A PROXIMA PERGUNTA")
+        charada()
+        
+def charada():  
+    p2 = input("\n2- O QUE É O QUE É DE DIA TEM 4 PERNAS , DE TARDE 2 PERNAS E DE NOITE TEM 3 PERNAS ?: \n") 
+    
+    if p2 == "uma pessoa" or p2 == "pessoa":
+        print("VOCÊ ACERTOU É UMA PESSOA PORQUE QUANDO NOVO VOCÊ ENGATINHA(4 PERNAS),NA FASE DE CRIANÇA ATÉ ADULTO VOCÊ ANDA NORMALMENTE (2 PERNAS) , E QUANDO IDOSO USA BENGALA(3 PERNAS), MAS INFELIZMENTE NÃO GANHOU NADA")
+        charada2()
+    else:
+        print("VOCÊ FOI PRESO")
+        charada()
+        
+def charada2():
+    p3 = input("\n3- EU PERTENÇO AO MÊS DE DEZEMBRO, E NÃO A QUALQUER OUTRO MÊS, EU NÃO SOU UM FERIADO, O QUE EU SOU?: \n")
+    
+    if p3 == "a letra d" or p3 == "d":
+        print("VOCÊ ACERTOU A RESPOSTA É 'D' PORQUE NENHUM OUTRO MÊS TEM ESSA LETRA, MAS INFELIZMENTE NÃO GANHOU NADA")
+        charada3()
+    else:
+        print("VOCÊ FOI MORTO")
+        charada2()
+        
+def charada3():
+    p4 = input("\n4- A É IRMAO DO B,B É IRMAO DE C,C É MAE DE D.QUAL É O PARANTESCO ENTRE D E A?: \n")
+    
+    if p4 == "a é tio de d" or p4 == "a é tio do d":
+        print("VOCÊ ACERTOU E COMO RECOMPENSA GANHOU UMA LAMPADA MÁGICA COM 5 DESEJOS")
+    else:
+        print("VOCÊ ERROU VAMOS PARA A PROXIMA PERGUNTA")
+        
+    p5 = input("\n5- O QUE SOBE UMA CHAMINÉ PARA BAIXO,MAS NAO DESCE UMA CHAMINÉ PARA CIMA?: ")
+    
+    if p5 == "guarda chuva":
+        print("VOCÊ ACERTOU E GANHOU UM TESOURO")
+    else:
+        print("VOCÊ ERROU")
+        
+    print("\nOBRIGADO POR JOGAR")
+questao1()
