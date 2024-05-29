@@ -1,0 +1,144 @@
+#1 - Soma dos Elementos: Escreva uma função que recebe uma lista de números como entrada e retorna a soma de todos os elementos da lista.
+
+print("Soma de Elementos")
+var = [1,2,3,4,5,6,7,8,9]
+
+print(sum(var))
+
+
+#2 - Maior e Menor Elemento: Escreva uma função que recebe uma lista de números como entrada e retorna o maior e o menor elemento da lista.
+
+print("Maior e Menor Elemento")
+var = [1,2,3,4,5,6,7,8,9]
+
+print(min(var))
+print(max(var))
+
+
+# 3 - Média dos Elementos: Escreva uma função que recebe uma lista de números como entrada e retorna a média dos elementos da lista
+
+print("Média dos Elementos")
+var = [1,2,3,4,5,6,7,8,9]
+
+print(sum(var)/len(var))
+
+
+# 4 - Contagem de Elementos Pares e Ímpares: Escreva uma função que recebe uma lista de números como entrada e retorna a quantidade de números pares e ímpares na lista.
+
+print("Elementos Pares e Ímpares\n")
+var = [1,2,3,4,5,6,7,8,9]
+
+par = (sum(1 for i in var if i % 2 == 0))
+impar = (len(var) - par)
+
+
+print("A quantidade de números pares é ",par)
+print("E a quantidade de números impar é",impar)
+
+
+# 5 - Inversão da Lista: Escreva uma função que recebe uma lista como entrada e retorna uma nova lista com os elementos na ordem inversa.
+
+print("Inversão dos Números")
+var = [1,2,3,4,5,6,7,8,9]
+
+ordem = sorted(var, reverse=True) 
+print(ordem)
+
+
+# 6 - Remoção de Duplicatas: Escreva uma função que recebe uma lista como entrada e retorna uma nova lista sem elementos duplicados, preservando a ordem original.
+
+print("Remoção de Duplicatas")
+var = [1,2,3,4,5,6,7,3,5]
+
+print(var)
+dupli = set(var)
+print(dupli)
+
+
+# 7 - Ordenação de uma Lista Personalizada: Escreva uma função que recebe uma lista de tuplas como entrada, onde cada tupla contém um nome e uma idade, e retorna a lista ordenada pelo nome em ordem alfabética.
+
+print("Nome em Ordem alfabética\n")
+pessoas = [('Isa',17),('Milly',18),('Jess',19)]
+
+ordem = sorted(pessoas)
+ordernar_por_nome = sorted(pessoas, key=lambda x: x [1])
+print(ordem)
+
+
+# 8 - Fusão e Ordenação de Listas: Escreva uma função que recebe duas listas de números como entrada e retorna uma nova lista ordenada contendo todos os elementos das duas listas originais.
+
+print("Fusão e Ordenação de Listas\n")
+
+var = [21,13,7,45]
+var2 = [51,19,34]
+
+ordem = sorted(var + var2)
+print(ordem)
+
+
+#9 - Substituição de Elementos: Escreva uma função que recebe uma lista e dois valores como entrada, e substitui todas as ocorrências do primeiro valor pelo segundo valor na lista
+
+print("Substituição de Elementos")
+var = [1,2,3,4,5,6,7,8,9]
+
+ant = 5
+novo = 50
+
+vetor_nov = [novo if i == ant else i for i in range(10)]
+print(vetor_nov)
+
+
+# O var esta declarando os números
+#O ant declara o número que será trocado
+#O novo declara o número que será colocado no lugar do outro
+#O vetor_nov fala que o número vinculado ant deve ser substituído pelo número vinculado ao novo
+#O print chama o vetor_nov
+
+
+No lugar do exercício 10 eu fiz a atividade de adivinhar o número escolhido pelo programa.
+
+
+print("Adivinhe o número\n")
+
+from random import randint
+def num_aleatorio():
+
+    al=randint(1,100)
+    num=0
+
+    while al != num:
+
+        num = int(input("Digite um número: "))
+
+        if al == nm:
+            print("Você acertou o número")
+        elif al > num:
+            print("Seu número é pequeno,coloque outro número que seja maior")
+        elif al < num:
+            print("Seu número é grande,coloque outro número que seja menor")
+
+num_aleatorio()
+
+        
+
+        
+
+        
+
+            
+
+            
+
+
+
+
+
+        
+
+        
+
+            
+
+            
+
+
