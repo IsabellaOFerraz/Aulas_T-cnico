@@ -1,0 +1,53 @@
+#Calculadora
+
+def funcao1():
+    print("Calculadora\n")
+    a = int(input("Digite um número: "))
+    tipo = input("Qual sera o tipo da conta? Adição(+), subtrção(-), divisão(/) ou multiplicação(*): ")
+    b = int(input("Digite outro número: "))
+    adi =(a+b)
+    sub =(a-b)
+    div =(a/b)
+    mul =(a*b)
+
+    if tipo =="+":
+        print(a,"mais",b,"da",adi)
+        funcao2(a,tipo,b,adi,sub,div,mul)
+    elif tipo =="-":
+        print(a,"menos",b,"da",sub)
+        funcao2(a,tipo,b,adi,sub,div,mul)
+    elif tipo =="/":
+        print(a,"dividido por",b,"da",div)
+        funcao2(a,tipo,b,adi,sub,div,mul)
+    elif tipo =="*":
+        print(a,"multiplicado por",b,"da",mul)
+        funcao2(a,tipo,b,adi,sub,div,mul)
+    else:
+        print("Operação invalida")
+        funcao1()
+       
+def funcao2(a,tipo,b,adi,sub,div,mul):
+    cont = input("\nVocê deseja fazer outra conta? Sim ou não: ")
+
+    if cont == "sim" or cont == "s":
+        print("\nOk então vamos\n")
+        funcao1()
+    else:
+        print("\nOk fim")
+
+funcao1()
+
+
+#1 Crie uma função que multiplica dois números inseridos pelo usuário.
+
+print("Multiplicação de dois números")
+n1 = int(input("Insira um número: "))
+n2 = int(input("Insira outro número: "))
+mul = (n1*n2)
+print(n1,"multiplicado por",n2,"da",mul)
+
+
+#2 Crie uma função que adicione o sobrenome Silva em alguém que teve o nome inserido pelo usuário
+
+nome = input("Insira o seu nome: ")
+print("Ola",nome,"Silva")
