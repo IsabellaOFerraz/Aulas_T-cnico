@@ -1,0 +1,170 @@
+# 1 Exiba o maior número entre dois valores
+
+print("Qual o maior valor")
+n1 = int(input("Digite um número: "))
+n2 = int(input("Digite outro número: "))
+
+if n1 > n2 :
+    print("O maior número é: ",n1)
+else:
+    print("O maior é: ",n2)
+
+
+# 2 Exiba o menor número entre dois valores.
+
+print("Qual o menor valor")
+n1 = int(input("Digite um número: "))
+n2 = int(input("Digite outro número: "))
+
+if n1 < n2 :
+    print("O maior número é: ",n1)
+else:
+    print("O maior é: ",n2)
+
+
+#3 Agora crie uma condição adicional dizendo se ambos os números forem iguais
+
+print("Qual número é maior, qual é o menor e se são iguais ou não")
+n1 = int(input("Digite um número: "))
+n2 = int(input("Digite outro número: "))
+
+if n1 > n2 :
+    print("O maior número é: ",n1)
+else:
+    print("O maior número é: ",n2)
+if n1 < n2 :
+    print("O menor número é: ",n1)
+else:
+    print("O menor número é: ",n2)
+if n1 == n2 :
+    print("Os números são iguais ")
+else:
+    print("Eles são diferentes")
+
+
+#4 Peça o nome e salário de dois funcionários, traga qual ganha mais, e quanto ele ganha mais que o outro funcionário.
+
+print("Sobre nossos funcionários(a)")
+n1 = input("Qual é o nome do primeiro funcionário(a): ")
+sal1 = int(input("Qual é o salario do primeiro funcionário(a): "))
+n2 = input("Qual o nome do segundo funcionário(a): ")
+sal2 = int(input("Qual é o salário do primeiro funcionário(a): "))
+conta = (sal1 - sal2)
+
+if sal1 > sal2:
+    print("O funcionário(a) {} ganha {} a mais que o funcionário(a) {}".format(n1,sal1-sal2,n2))
+elif sal2 > sal1:
+    print("o funcionário(a) {} ganha {} a mais que o funcionário(a) {} ".format (n2,sal2-sal1,n1))
+else:
+    print('eles ganham a mesma coisa')
+ 
+
+#5 Faça um programa que diga o imc e se a pessoa está abaixo do peso (menos que 18,5) ,com peso ideal(entre 18,5 e 24,9 ) ou acima do peso (maior que 24,9).
+
+print("Saiba o seu imc")
+altura = float(input("Qual é a sua altura: "))
+peso = float(input("Qual é o seu peso: "))
+imc = peso/(altura*altura)
+print("O seu imc é ",imc)
+
+if  imc < 18.5:
+    print("Você está abaixo do peso")
+elif imc >= 18.5 and imc <= 24.9:
+    print("Você está no peso ideal")
+else:
+    print("Você está acima do peso")
+
+
+#6  Faça um programa que verifique se a pessoa é maior de idade e do sexo feminino
+
+nome = input("Qual é o seu nome: ")
+idade = int(input("Qual é a sua idade: "))
+sexo = input("Qual é o seu gênero feminino(f) ou masculino(m): ")
+
+if idade >= 18 and sexo == "f":
+    print("Você é maior de idade e é uma mulher")
+elif idade < 18 and sexo == "f":
+    print("Você é menor de idade e é uma mulher")
+else:
+    print("Você não é qualificado")
+
+
+#7 Organiza três números do maior para o menor
+
+print("Ordem decrescente")
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+n3 = int(input("Digite o terceiro número: "))
+
+if n1 > n2 > n3:
+    print("A ordem decrescente é ",n1,n2,n3)
+elif n1 > n3 > n2:
+    print("A ordem decrescente é ",n1,n3,n2)
+elif n2 > n1 > n3:
+    print("A ordem decrescente é ",n2,n1,n3)
+elif n2 > n3 > n1:
+    print("A ordem decrescente é ",n2,n3,n1)
+elif n3 > n1 > n2:
+    print("A ordem decrescente é ",n3,n1,n2)
+elif n3 > n2 > n1:
+    print("A ordem decrescente é ",n3,n2,n1)
+
+
+#8 Some dois números, se o valor resultante for positivo e par, devolva “+par”, se for positivo mas ímpar devolva”+ímpar”, siga a mesma lógica para números negativos
+
+print("Número positivo, par ou ímpar")
+num = int(input("Digite um número: "))
+ 
+if num % 2 == 0 and num > 0:
+    print("O número é par e positivo")
+elif num % 2 == 1 and num > 0:
+    print("O número é ímpar e positivo")
+elif num % 2 == 0 and num < 0 :
+    print("O número é par e negativo")
+else:
+    print("O número é ímpar e negativo")
+
+
+#9 Some dois valores e devolva a mensagem “É isso aí” se a soma resultar em 40 ou entre 25 e 33. E devolva as opções possíveis.
+
+print("Número positivo, par ou ímpar")
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+soma = (n1+n2)
+
+if soma == 40:
+    print("É isso aí,a soma dos dois números da 40")
+elif soma  >=25 and soma <= 33:
+    print("É isso aí,o número está entre 25 a 33")
+else:
+    print("O número não é 40, e também não está entre 25 a 33")
+
+
+#10 Verifique se alguém é maior de idade para entrar em um bar no brasil + 18 ou nos estados unidos +21 e devolva as opções cabíveis
+
+print("Idade legal")
+idade = int(input("Qual é a sua idade: "))
+
+if idade >= 18 and idade >= 21:
+    print("Você é maior de idade tanto no Brasil quanto no Estados Unidos")
+if idade >= 18 and idade < 21 :
+    print("Você é maior de idade no Brasil, mas não é maior de idade no Estados Unidos")
+
+ 
+#11 Um parque aceita que qualquer um com mais de 1,60 e 16 anos vá nos brinquedos, agora se você tiver 1,50 e estiver acompanhado também é permitido, porém se tiver menos que 1,50 e for maior de idade terá que assinar um termo para usar os brinquedos, caso seja menor que 1,50 e não for maior de idade não poderá usar os brinquedos mesmo que esteja acompanhado, mas lhe será recomendado passeios menos perigosos. Crie um código com todas as possibilidades.
+
+print("Parque de diversões")
+print("Para a gente ter um melhor controle é necessário que informe")
+altura = float(input("Qual é a sua altura: "))
+idade = int(input("Qual é a sua idade: "))
+acomp = input("Você está acompanhado por um responsável sim ou não: ")
+
+if altura >1.60 and idade >= 16:
+    print("Você pode entrar nos brinquedos")
+elif altura >= 1.50 and altura < 1.60 and idade < 18 and acomp == "sim" :
+    print("Como você esta acompanhado pode entrar nos brinquedos")
+elif altura <= 1.50 and idade >=18:
+    print("Você pode entrar nos brinquedos se assinar o termo")
+else:
+    print("Você não pode entrar mesmo acompanhado, mas você pode fazer algum passeio menos perigoso")
+
