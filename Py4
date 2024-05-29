@@ -1,0 +1,133 @@
+# 1 - Liste uma sequência de 10 números do maior para o menor
+
+print("Sequência de números na ordem decrescente")
+variavel = 10
+while variavel <= 10:
+    print(variavel)
+    variavel -= 1
+    if variavel < 1 :
+        break
+
+
+# 2 - liste uma sequência numérica que começa em um valor inserido pelo usuário e acaba em um outro valor escolhido pelo usuário
+
+print("Sequência Numérica")
+inicio = int(input("Digite o primeiro número: "))
+final = int(input("Digite o segundo número (ele precisa ser maior que o valor colocado anteriormente:  "))
+
+for inicio in range(final,inicio-1,-1):
+    print(inicio)
+
+
+# 3 - Solicite um número ao usuário e imprima a tabuada desse número, de 1 a 10
+
+print("Tabuada")
+num = int(input("Digite um número: "))
+
+for i in range(1,11):
+    print('{} x {} = {}'. format(num,i,num*i))
+
+
+# 4 - Solicite dois números ao usuário e verifique quantos números pares ou ímpares existem entre esses dois números
+
+print("Quantos números são pares e ímpares")
+n1 = int(input("Digite um número: "))
+n2 = int(input("Digite outro número: "))
+par = 0
+impar = 0
+for i in range(n1,n2+1):
+    if i % 2 == 0:
+        par += 1
+    else:
+        impar +=1
+       
+print('a quantidade de par é de: ', par)
+print('a quantidade de ímpar é de: ',impar)
+
+
+# 5 - Solicite um número inteiro positivo N ao usuário e calcule a soma dos primeiros N números naturais
+
+print("Soma dos Números")
+num = int(input("Digite um número: "))
+soma = 0
+for i in range(num+1):
+    soma+=i
+
+print(soma)
+
+
+# 6 - Solicite ao usuário a quantidade de notas que ele deseja inserir, em seguida, solicite essas notas e calcule a média
+
+print("Calculo da média")
+
+quant = int(input("Quantas notas você quer inserir: "))
+soma = 0
+
+for i in range(quant):
+    nota = float(input('Insira sua nota: '))
+    soma += nota
+   
+media = soma/quant  
+print('A média deu',media)
+ 
+   
+# 7 - Solicite um número inteiro positivo ao usuário e calcule o fatorial desse número.
+
+print("Calculo de Fatorial de um Número")
+num = int(input("Digite um número inteiro e positivo: "))
+fatorial = 1
+
+for i in range(1,num+1):
+    fatorial*=i
+   
+print(fatorial)
+   
+
+# 8 - Desenvolva um programa em Python que permita ao usuário escolher um número e gere a tabuada desse número até um limite especificado pelo próprio usuário
+
+print("Tabuada-2")
+num = int(input("Digite um número: "))
+lim = int(input("Até qual número você quer que a tabuada vá(o limite da tabuada): "))
+
+for i in range(1,lim+1):
+    print('{} x {} = {}'. format(num,i,num*i))
+   
+
+#9 - Desenvolva um programa em Python que solicite ao usuário um número inteiro. O programa deverá então exibir a tabuada de multiplicação até o número escolhido pelo usuário, fazendo as multiplicações de 1 até 10.
+
+print("Tabuada-3")
+lim = int(input("Até qual número você quer que a tabuada vá(o limite da tabuada): "))
+
+for i in range(1,lim+1):
+    print("\nEssa é a tabuada do {}".format(i))
+    for y in range(1,11):
+        print("{}x{}={}".format(i,y,i*y))
+       
+   
+#10 - Crie um programa em python que faça um triângulo da altura que o usuário escolher(Desafio)
+
+num = int(input("Digite um número de sua escolha: "))
+   
+for i in range(num):
+    print(' '*(num-i)+'*'*(2*i+1))
+   
+#Inicialmente será pedido para a pessoa escolher um número, esse número será a quantidade de linhas,com isso feito agora será feito 4 etapas.
+#A primeira etapa é para o asterisco aparecer terá que fazer um print ('*').
+# Na segunda etapa é para o asterisco aumentar de dois em dois a cada linha, para isso será feito uma conta dentro do print ('*'*(2*i+1)), a letra i representa as linhas, começando pelo número 0, então ele interpreta que é 2*0+1 que dá 1 na primeira linha, na linha dois seria 2*1+1=3, na linha quatro 2*2+1=5...
+# Na terceira etapa vamos acrescentar aspas simples com um espaço no print(' ''*'*(2*i+1)) para os asteriscos terem espaço entre eles
+#E na quarta etapa será feito outra conta para organizar os asteriscos formando um triângulo,a conta será espaço vezes a quantidade escolhida (o número) menos o i mais o resto do código então fica print(' '*(num-i)+'*'*(2*i+1))
+
+
+   
+   
+   
+     
+   
+   
+   
+   
+
+
+
+   
+   
