@@ -1,0 +1,99 @@
+# 1) Calcular a Média de Três Números:
+#Escreva um programa em Python que calcule a média de três números e exiba o resultado.
+
+print("Como saber a média de três números")
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+num3 = int(input("Digite o terceiro número: "))
+media = (num1 + num2 + num3)/3
+print("A média é: ",media)
+
+
+# 2) Calcular a Soma de Dois Números:
+#Peça ao usuário que insira dois números e exiba a soma deles.
+
+print("A soma de dois números")
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+media = (num1 + num2 )
+print("A soma é: ",media)
+
+
+# 3) Converter Idade para Dias:
+#Peça ao usuário que digite sua idade e exiba quantos dias ela tem aproximadamente.
+
+print("A sua idades em dias")
+idade = int(input("Digite a sua idade: "))
+soma = (idade * 365)
+print("A sua idade em dias é igual a: ",soma)
+
+
+# 4) Calcular o Quadrado de um Número:
+#Peça ao usuário que insira um número e exiba o quadrado dele.
+
+print("Calcule o quadrado de um número")
+n1 = int(input("Digite o número: "))
+quadrado = (n1 * n1)
+print("O quadrado dele é: ",quadrado)
+
+
+# 5) Verificar se um Número é Par ou Ímpar:
+#Peça ao usuário que insira um número e verifique se ele é par ou ímpar. Exiba o resultado.
+
+print("Verificar se um Número é Par ou Ímpar")
+n1 = int(input("Digite o número: "))
+
+if n1 % 2 == 0  :
+    print("O número: ",n1,"é par")
+else:
+    print("O número: ",n1,"é impar")
+
+
+# 6) Faça um programa que converta metros em centímetros
+
+print("Conversão de metros para centimetros")
+num = int(input("Digite o número: "))
+soma = (num * 100)
+print(num,"metros em centimetros é:",soma)
+
+
+# 7)Faça um programa que pergunte quanto você ganha por hora, quantas horas você tem trabalhada no mês e mostre quanto você ganharia em 3 meses
+
+print("Quanto você ganha em três meses")
+tempo = int(input("Digite quantas horas você trabalha por mÊs: "))
+valor = int(input("Digite o quanto você ganha por hora: "))
+soma = (tempo * valor)*3
+print("Em três messes você ganha :",soma)
+
+
+# 8)Faça um programa que pegue o raio de um círculo e calcule sua área
+
+print("Cálculo da área")
+raio = float(input("Digite o raío do círculo: "))
+pi = 3.14
+area = pi * (raio * raio)
+print("A área de",raio,"é de",area)
+
+
+# 9)Faça um programa que calcule a área de um quadrado
+
+print("Cálculo da área do quadrado")
+num = int(input("Digite a área do quadrado: "))
+area = (num * num)
+print("A área quadrada de",num,"é",area)
+
+
+# 10)Faça um programa que recebe o salário total de alguém e mostra como seria esse salário com um aumento de 5%, 15% e 30%
+
+print("Saiba coo seria o seu salario com um aumento de 5%, 15% e 30%")
+salario = int(input("De quanto é o seu salario: "))
+print("O aumento sera de ",salario*1.05,",",salario*1.15," e",salario*1.30)
+
+
+# 11)Faça um programa que recebe nome, idade e apelido de alguém e devolve uma frase de boas vindas
+
+print("Por favor")
+nome = input("Qual é o se nome ?: ")
+apelido = input("E qual é o seu apelido ?: ")
+idade = int(input("E sua idade é ?: "))
+print("Ola",nome,"ou melhor",apelido,"você tem",idade,"ano(s) né, seja bem vindo(a)")
